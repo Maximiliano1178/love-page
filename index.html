@@ -41,19 +41,48 @@
 
     <h1 id="texto">Do you want to be my girlfriend? 💖</h1>
 
-    <button class="yes" onclick="yes()">Yes</button>
-    <button class="no" onclick="no()">No</button>
+    <button class="yes" id="yesBtn" onclick="yes()">Yes</button>
+    <button class="no" id="noBtn" onclick="no()">No</button>
 
     <script>
+
+        let preguntaNo = false;
+
         function yes(){
-            document.getElementById("texto").innerHTML =
-            "YAYYY 💕";
+
+            if(preguntaNo == false){
+
+                window.location.href =
+                "https://maximiliano1178.github.io/index.html/";
+
+            }else{
+
+                document.getElementById("texto").innerHTML =
+                "😢";
+
+                document.getElementById("yesBtn").disabled = true;
+                document.getElementById("noBtn").disabled = true;
+            }
         }
 
         function no(){
-            document.getElementById("texto").innerHTML =
-            "Are you sure? 😢";
+
+            if(preguntaNo == false){
+
+                document.getElementById("texto").innerHTML =
+                "Are you sure?";
+
+                preguntaNo = true;
+
+            }else{
+
+                document.getElementById("texto").innerHTML =
+                "Do you want to be my girlfriend? 💖";
+
+                preguntaNo = false;
+            }
         }
+
     </script>
 
 </body>
