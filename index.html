@@ -1,9 +1,60 @@
-print("do you want to be my girlfriend")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Love Page</title>
 
-respuesta = input("yes or no: ")
+    <style>
+        body{
+            background: pink;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 200px;
+        }
 
-if respuesta == "yes":
-    print("https://maximiliano1178.github.io/index.html/")
-else:
-    respuesta == "no"
-    print("Are your Sure?")
+        h1{
+            font-size: 40px;
+        }
+
+        button{
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .yes{
+            background: green;
+            color: white;
+        }
+
+        .no{
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="texto">Do you want to be my girlfriend? 💖</h1>
+
+    <button class="yes" onclick="yes()">Yes</button>
+    <button class="no" onclick="no()">No</button>
+
+    <script>
+        function yes(){
+            document.getElementById("texto").innerHTML =
+            "YAYYY 💕";
+        }
+
+        function no(){
+            document.getElementById("texto").innerHTML =
+            "Are you sure? 😢";
+        }
+    </script>
+
+</body>
+</html>
